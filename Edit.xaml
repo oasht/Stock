@@ -1,0 +1,21 @@
+﻿<Window x:Class="tovars_wpf.EditTovar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:tovars_wpf"
+        mc:Ignorable="d"
+        Title="Edit" Height="300" Width="300">
+    <UniformGrid Columns="1">
+        <TextBlock>Name:</TextBlock>
+        <TextBox Text="{Binding Name}"/>
+
+        <TextBlock>Quantity:</TextBlock>
+        <TextBox Text="{Binding Amount}"/>
+
+        <TextBlock>Measure:</TextBlock>
+        <ComboBox SelectedItem="{Binding Measure}" x:Name="measure_cb"/>
+
+        <Button Click="Button_Click_Save">Save</Button>
+    </UniformGrid>
+</Window>
